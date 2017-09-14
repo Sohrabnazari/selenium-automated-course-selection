@@ -37,5 +37,9 @@ driver.get( config.url.lesson ).then(function(){
 });
 
 
+
+// driver.findElements(By.css( config.element.lesson.submitAll.id  )).click();
+driver.findElement(By.id( config.element.lesson.submitAll.id )).click();
+
 driver.sleep(10000);
 driver.quit();

@@ -18,7 +18,9 @@ module.exports = function() {
                 form: { id: "frmSelect" },
                 code: { id: "LessonCode" },
                 group: { id: "LessonGroup" },
-                submit: { xpath: "/html/body/center/table[4]/tbody/tr/td[4]/input" }
+                ckeckbox: { css: "input[type=checkbox]" },
+                submit: { xpath: "/html/body/center/table[4]/tbody/tr/td[4]/input" },
+                submitAll: { id: "btnValidate" },
             }
         },
 
