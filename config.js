@@ -1,13 +1,9 @@
-
 module.exports = function() {
-
     var config = {
-
         url: {
             login: "http://46.225.234.116/samaweb/",
             lesson: "http://46.225.234.116/samaweb/stuUnitSelection.asp"
         },
-
         element: {
             login: {
                 username: { name: "UserCode" },
@@ -23,21 +19,17 @@ module.exports = function() {
                 submitAll: { id: "btnValidate" },
             }
         },
-
         data: {
             login: {
                 username: "YOUR_USERNAME",
                 password: "YOUR_PASSWORD"
             },
-
             lessons: [
 
                 { code: "YOUR_LESSONCODE", group: "YOUR_LESSONGROUP" },
                 { code: "YOUR_LESSONCODE", group: "YOUR_LESSONGROUP" }
             ],
-            
         },
-
     }
 
     return config;

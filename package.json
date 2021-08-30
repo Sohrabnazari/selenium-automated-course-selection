@@ -1,7 +1,7 @@
 {
-  "name": "selenium-automated-unit-selection",
+  "name": "selenium-automated-course-selection",
   "version": "1.0.0",
-  "description": "SAMA System automated unit selection for students",
+  "description": "SAMA System automated course selection for students",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

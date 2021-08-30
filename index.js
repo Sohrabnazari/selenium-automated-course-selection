@@ -6,15 +6,12 @@ var chrome = require('selenium-webdriver/chrome');
 var path = require('chromedriver').path;
 var config = require('./config.js')();
 
-
 var service = new chrome.ServiceBuilder(path).build();
 chrome.setDefaultService(service);
 
 var driver = new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .build();
-
-
 
 // login into the site
 driver.get( config.url.login ).then(function(){
@@ -23,9 +20,7 @@ driver.get( config.url.login ).then(function(){
     driver.findElement(By.id( config.element.login.submit.id )).click();
 });;
 
-
-
-// unit selection
+// taking courses
 driver.get( config.url.lesson ).then(function(){
     config.data.lessons.map(function(lesson){
         driver.findElement(By.id( config.element.lesson.code.id )).sendKeys( lesson.code );
@@ -37,8 +32,6 @@ driver.get( config.url.lesson ).then(function(){
 });
 
 
-
-// driver.findElements(By.css( config.element.lesson.submitAll.id  )).click();
 driver.findElement(By.id( config.element.lesson.submitAll.id )).click();
 
 driver.sleep(10000);
